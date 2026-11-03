@@ -4,25 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard Analytics | Portofolio</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="project-detail.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300;400;700&family=Newsreader:ital,wght@0,400;1,400&family=Geist+Mono:wght@400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/project-detail.css">
 </head>
 <body>
-    <nav class="navbar">
-        <div class="container">
-            <div class="logo">
-                <h2><span class="gradient-text">My</span>Portfolio</h2>
-            </div>
-            <ul class="nav-links">
-                <li><a href="index.html#home">Home</a></li>
-                <li><a href="index.html#about">Tentang</a></li>
-                <li><a href="index.html#skills">Keahlian</a></li>
-                <li><a href="index.html#portfolio">Portofolio</a></li>
-                <li><a href="index.html#contact">Kontak</a></li>
+    <!-- ===== HEADER ===== -->
+    <header class="site-header" id="site-header">
+        <div class="header-inner">
+            <a href="index.html#home" class="site-logo">Ramadhani</a>
+            <nav class="site-nav" aria-label="Navigasi utama">
+                <ul class="nav-list">
+                    <li><a href="index.html#home" class="nav-link">Home</a></li>
+                    <li><a href="index.html#about" class="nav-link">Tentang</a></li>
+                    <li><a href="index.html#skills" class="nav-link">Keahlian</a></li>
+                    <li><a href="index.html#portfolio" class="nav-link active">Portofolio</a></li>
+                    <li><a href="index.html#contact" class="nav-link">Kontak</a></li>
+                </ul>
+                <span class="nav-clock" id="nav-clock" aria-label="Waktu WIB"></span>
+            </nav>
+            <button class="hamburger" id="hamburger" aria-label="Buka menu" aria-expanded="false" aria-controls="mobile-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+        <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+            <ul class="mobile-nav-list">
+                <li><a href="index.html#home" class="mobile-nav-link">Home</a></li>
+                <li><a href="index.html#about" class="mobile-nav-link">Tentang</a></li>
+                <li><a href="index.html#skills" class="mobile-nav-link">Keahlian</a></li>
+                <li><a href="index.html#portfolio" class="mobile-nav-link">Portofolio</a></li>
+                <li><a href="index.html#contact" class="mobile-nav-link">Kontak</a></li>
             </ul>
         </div>
-    </nav>
+    </header>
 
     <section class="project-header">
         <div class="container">
@@ -54,8 +73,8 @@
                 <div class="details-main">
                     <h2>Tentang Project</h2>
                     <p>
-                        Dashboard analytics yang membantu bisnis untuk memvisualisasikan dan menganalisis data mereka secara real-time. 
-                        Dibangun dengan Vue.js dan Chart.js untuk visualisasi data yang interaktif dan informatif.
+                        Dashboard analitik real-time yang dirancang untuk membantu para pengambil keputusan memantau metrik performa bisnis utama. 
+                        Dibangun dengan arsitektur komponen Vue.js yang modular dan integrasi visualisasi Chart.js yang dinamis.
                     </p>
                     
                     <h3>Fitur Utama</h3>
@@ -63,25 +82,37 @@
                         <li>
                             <i class="fas fa-check-circle"></i>
                             <div>
-                                <strong>Real-time Data</strong>
-                                <p>Update data secara real-time dengan WebSocket</p>
+                                <strong>Visualisasi Data Dinamis</strong>
+                                <p>Grafik garis, batang, dan donat interaktif dengan animasi halus</p>
                             </div>
                         </li>
                         <li>
                             <i class="fas fa-check-circle"></i>
                             <div>
-                                <strong>Interactive Charts</strong>
-                                <p>Visualisasi data dengan berbagai jenis chart interaktif</p>
+                                <strong>Filter Rentang Waktu</strong>
+                                <p>Agregasi metrik berdasarkan harian, mingguan, bulanan, dan custom range</p>
                             </div>
                         </li>
                         <li>
                             <i class="fas fa-check-circle"></i>
                             <div>
-                                <strong>Custom Reports</strong>
-                                <p>Generate custom reports berdasarkan filter yang dipilih</p>
+                                <strong>Export Laporan</strong>
+                                <p>Kemampuan mengunduh ringkasan performa dalam format PDF dan CSV</p>
                             </div>
                         </li>
                     </ul>
+
+                    <h3>Teknologi yang Digunakan</h3>
+                    <div class="tech-stack">
+                        <div class="tech-item">
+                            <i class="fab fa-vuejs"></i>
+                            <span>Vue.js</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fas fa-chart-bar"></i>
+                            <span>Chart.js</span>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="details-sidebar">
@@ -102,7 +133,7 @@
                     <div class="sidebar-card">
                         <h3>Links</h3>
                         <div class="project-links">
-                            <a href="https://github.com/dhani57" target="_blank" class="project-btn">
+                            <a href="https://github.com/dhani57" target="_blank" rel="noopener" class="project-btn">
                                 <i class="fab fa-github"></i>
                                 View on GitHub
                             </a>
@@ -117,18 +148,23 @@
         <div class="container">
             <h2>Tertarik dengan Project Saya?</h2>
             <p>Mari diskusikan project Anda selanjutnya</p>
-            <a href="index.html#contact" class="btn btn-primary">Hubungi Saya</a>
+            <a href="index.html#contact" class="btn-pill btn-pill--primary">Hubungi Saya</a>
         </div>
     </section>
 
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-bottom">
-                <p>&copy; 2025 MyPortfolio. Oleh Ramadhani Ahmad</p>
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <a href="index.html#home" class="site-logo site-logo--inverse">Ramadhani</a>
+            <p class="footer-copy">&copy; 2025 Ramadhani Ahmad. All rights reserved.</p>
+            <div class="footer-social">
+                <a href="https://github.com/dhani57" target="_blank" rel="noopener" aria-label="GitHub" class="social-icon social-icon--inverse"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/ramadhani-ahmad/" target="_blank" rel="noopener" aria-label="LinkedIn" class="social-icon social-icon--inverse"><i class="fab fa-linkedin"></i></a>
+                <a href="https://www.instagram.com/ramadhnii_ahmd/" target="_blank" rel="noopener" aria-label="Instagram" class="social-icon social-icon--inverse"><i class="fab fa-instagram"></i></a>
             </div>
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
