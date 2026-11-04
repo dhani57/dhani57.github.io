@@ -1,6 +1,6 @@
 /**
- * main.js — Fiasco UI Portfolio Scripts
- * Lightweight, accessible, no heavy animations
+ * main.js — Interactive & Accessible Script
+ * Handles Navigation, Typing Effect, Real-time Clock, Marquee & Form Validation
  */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -19,7 +19,6 @@ document.addEventListener('DOMContentLoaded', () => {
       });
       navClock.innerHTML = `${timeStr} <sup>WIB</sup>`;
     } catch {
-      // Fallback if Intl timeZone fails
       const now = new Date();
       const h = String(now.getHours()).padStart(2, '0');
       const m = String(now.getMinutes()).padStart(2, '0');
@@ -54,7 +53,6 @@ document.addEventListener('DOMContentLoaded', () => {
       mobileMenu.setAttribute('aria-hidden', String(!isOpen));
     });
 
-    // Close menu when clicking any mobile link
     const mobileLinks = mobileMenu.querySelectorAll('.mobile-nav-link');
     mobileLinks.forEach(link => {
       link.addEventListener('click', () => {
@@ -65,7 +63,6 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
 
-    // Close when clicking outside
     document.addEventListener('click', (e) => {
       if (!header.contains(e.target) && mobileMenu.classList.contains('is-open')) {
         hamburger.classList.remove('is-active');
@@ -76,12 +73,54 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // ===== 4. ACTIVE NAVIGATION LINK ON SCROLL =====
+  // ===== 4. HERO DYNAMIC TYPING EFFECT =====
+  const typingTarget = document.querySelector('.hero-role-text');
+  if (typingTarget) {
+    const roles = [
+      'Fullstack Web Developer',
+      'Frontend Specialist',
+      'UI/UX & Code Enthusiast',
+      'Modern Web Architect'
+    ];
+    let roleIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+    let typeSpeed = 100;
+
+    function typeRole() {
+      const currentRole = roles[roleIndex];
+
+      if (isDeleting) {
+        typingTarget.textContent = currentRole.substring(0, charIndex - 1);
+        charIndex--;
+        typeSpeed = 45;
+      } else {
+        typingTarget.textContent = currentRole.substring(0, charIndex + 1);
+        charIndex++;
+        typeSpeed = 100;
+      }
+
+      if (!isDeleting && charIndex === currentRole.length) {
+        isDeleting = true;
+        typeSpeed = 2200; // Pause at end of word
+      } else if (isDeleting && charIndex === 0) {
+        isDeleting = false;
+        roleIndex = (roleIndex + 1) % roles.length;
+        typeSpeed = 400; // Pause before typing new word
+      }
+
+      setTimeout(typeRole, typeSpeed);
+    }
+
+    typeRole();
+  }
+
+  // ===== 5. ACTIVE NAVIGATION LINK ON SCROLL =====
   const sections = document.querySelectorAll('section[id]');
   const navLinks = document.querySelectorAll('.nav-link');
 
   function updateActiveNavLink() {
-    const scrollPos = window.scrollY + 120;
+    const scrollPos = window.scrollY + 140;
     sections.forEach(section => {
       const top = section.offsetTop;
       const height = section.offsetHeight;
@@ -99,32 +138,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
   window.addEventListener('scroll', updateActiveNavLink, { passive: true });
-
-  // ===== 5. PORTFOLIO FILTER CHIPS =====
-  const filterButtons = document.querySelectorAll('.filter-bar button');
-  const workCards = document.querySelectorAll('.work-card');
-
-  if (filterButtons.length && workCards.length) {
-    filterButtons.forEach(btn => {
-      btn.addEventListener('click', () => {
-        const filter = btn.dataset.filter;
-
-        // Update aria-pressed
-        filterButtons.forEach(b => b.setAttribute('aria-pressed', 'false'));
-        btn.setAttribute('aria-pressed', 'true');
-
-        // Filter cards
-        workCards.forEach(card => {
-          const category = card.dataset.category;
-          if (filter === 'all' || category === filter) {
-            card.classList.remove('is-hidden');
-          } else {
-            card.classList.add('is-hidden');
-          }
-        });
-      });
-    });
-  }
 
   // ===== 6. CONTACT FORM VALIDATION & FEEDBACK =====
   const contactForm = document.getElementById('contact-form');
@@ -146,7 +159,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       let isValid = true;
 
-      // Clear errors
+      // Reset errors
       [nameError, emailError, subjectError, messageError].forEach(el => {
         if (el) el.textContent = '';
       });
@@ -156,7 +169,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       // Name validation
       if (!nameInput.value.trim()) {
-        nameError.textContent = 'Nama wajib diisi.';
+        nameError.textContent = 'Nama lengkap wajib diisi.';
         nameInput.setAttribute('aria-invalid', 'true');
         isValid = false;
       }
@@ -176,7 +189,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       // Subject validation
       if (!subjectInput.value.trim()) {
-        subjectError.textContent = 'Subject wajib diisi.';
+        subjectError.textContent = 'Subjek pesan wajib diisi.';
         subjectInput.setAttribute('aria-invalid', 'true');
         isValid = false;
       }
@@ -201,4 +214,3 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
 });
-

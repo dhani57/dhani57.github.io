@@ -3,12 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ramadhani Ahmad — Web Developer</title>
-    <meta name="description" content="Portofolio Ramadhani Ahmad — Web Developer yang membuat website berharga dan bermakna.">
+    <title>Ramadhani Ahmad — Fullstack Web Developer Portfolio</title>
+    <meta name="description" content="Portofolio Ramadhani Ahmad — Fullstack Web Developer yang membangun aplikasi web modern, responsif, terukur, dan berorientasi pada hasil nyata.">
+    <meta name="keywords" content="Ramadhani Ahmad, Web Developer, Fullstack Developer, Frontend Developer, Portofolio, HTML, CSS, JavaScript, React, Vue, PHP, Tailwind">
+    <meta name="author" content="Ramadhani Ahmad">
+
+    <!-- Open Graph / Facebook / LinkedIn -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://dhani57.github.io/">
+    <meta property="og:title" content="Ramadhani Ahmad — Fullstack Web Developer">
+    <meta property="og:description" content="Membangun website modern, responsif, dan user-friendly dengan arsitektur kode yang bersih.">
+    <meta property="og:image" content="assets/images/PasFoto.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://dhani57.github.io/">
+    <meta property="twitter:title" content="Ramadhani Ahmad — Fullstack Web Developer">
+    <meta property="twitter:description" content="Membangun website modern, responsif, dan user-friendly dengan arsitektur kode yang bersih.">
+    <meta property="twitter:image" content="assets/images/PasFoto.jpg">
+
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300;400;700&family=Newsreader:ital,wght@0,400;1,400&family=Geist+Mono:wght@400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300;400;500;600;700&family=Newsreader:ital,wght@0,400;1,400;1,500&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Main Stylesheet -->
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
@@ -22,6 +44,7 @@
                 <ul class="nav-list">
                     <li><a href="#home" class="nav-link active">Home</a></li>
                     <li><a href="#about" class="nav-link">Tentang</a></li>
+                    <li><a href="#experience" class="nav-link">Pengalaman</a></li>
                     <li><a href="#skills" class="nav-link">Keahlian</a></li>
                     <li><a href="#portfolio" class="nav-link">Portofolio</a></li>
                     <li><a href="#contact" class="nav-link">Kontak</a></li>
@@ -41,6 +64,7 @@
             <ul class="mobile-nav-list">
                 <li><a href="#home" class="mobile-nav-link">Home</a></li>
                 <li><a href="#about" class="mobile-nav-link">Tentang</a></li>
+                <li><a href="#experience" class="mobile-nav-link">Pengalaman</a></li>
                 <li><a href="#skills" class="mobile-nav-link">Keahlian</a></li>
                 <li><a href="#portfolio" class="mobile-nav-link">Portofolio</a></li>
                 <li><a href="#contact" class="mobile-nav-link">Kontak</a></li>
@@ -50,335 +74,741 @@
 
     <main>
 
-        <!-- ===== HERO ===== -->
+        <!-- ===== HERO SECTION (PAS FOTO DI SEBELAH KIRI DENGAN ANIMASI) ===== -->
         <section id="home" class="section-hero reveal">
-            <div class="hero-inner">
-                <div class="hero-avatar">
-                    <img src="assets/images/PasFoto.jpg" alt="Ramadhani Ahmad" class="hero-avatar-img">
+            <div class="hero-grid">
+
+                <!-- Left Column: PasFoto with Glow Frame & Animated Floating Tech Badges -->
+                <div class="hero-visual-col">
+                    <div class="hero-avatar-wrapper">
+                        <div class="hero-avatar-aura"></div>
+                        <div class="hero-avatar-frame">
+                            <img src="assets/images/PasFoto.jpg" alt="Pas Foto Ramadhani Ahmad" loading="eager">
+                        </div>
+
+                        <!-- Floating Animated Tech Badges -->
+                        <div class="floating-badge badge-react">
+                            <i class="fab fa-react"></i>
+                            <span>React</span>
+                        </div>
+                        <div class="floating-badge badge-js">
+                            <i class="fab fa-js"></i>
+                            <span>JavaScript</span>
+                        </div>
+                        <div class="floating-badge badge-python">
+                            <i class="fab fa-python"></i>
+                            <span>Python</span>
+                        </div>
+                        <div class="floating-badge badge-fullstack">
+                            <i class="fas fa-layer-group"></i>
+                            <span>Fullstack</span>
+                        </div>
+                    </div>
                 </div>
-                <p class="hero-sub">Ramadhani Ahmad &mdash; Web Developer &amp; Designer</p>
-                <h1 class="hero-headline">
-                    Saya membuat website<br>
-                    yang <em>berharga</em> dan bermakna
-                </h1>
-                <div class="hero-actions">
-                    <a href="#portfolio" class="btn-pill btn-pill--primary">Lihat Karya</a>
-                    <a href="#contact" class="btn-pill">Hubungi Saya</a>
+
+                <!-- Right Column: Hero Intro Content -->
+                <div class="hero-content-col">
+                    <div class="hero-status-pill">
+                        <span class="status-dot"></span>
+                        <span>Tersedia untuk Freelance &amp; Full-time</span>
+                    </div>
+
+                    <p class="hero-eyebrow">HALO, SAYA</p>
+                    <h1 class="hero-name">Ramadhani Ahmad</h1>
+
+                    <div class="hero-role-wrapper">
+                        <span class="hero-role-text">Fullstack Web Developer</span>
+                        <span class="hero-role-cursor">|</span>
+                    </div>
+
+                    <p class="hero-description">
+                        Saya membangun aplikasi web modern yang responsif, terukur, dan berorientasi pada hasil nyata — memadukan arsitektur kode yang bersih dengan pengalaman pengguna yang intuitif.
+                    </p>
+
+                    <div class="hero-actions">
+                        <a href="#portfolio" class="btn-pill btn-pill--primary">
+                            <i class="fas fa-eye"></i>
+                            <span>Lihat Proyek</span>
+                        </a>
+                        <a href="assets/images/PasFoto.jpg" class="btn-pill btn-pill--accent" download="CV-Ramadhani-Ahmad.pdf">
+                            <i class="fas fa-arrow-down"></i>
+                            <span>Download CV</span>
+                        </a>
+                        <a href="#contact" class="btn-pill">
+                            <span>Hubungi Saya</span>
+                        </a>
+                    </div>
+
+                    <div class="hero-social-list">
+                        <a href="https://github.com/dhani57" target="_blank" rel="noopener" aria-label="GitHub Ramadhani" class="social-pill-link">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/ramadhani-ahmad/" target="_blank" rel="noopener" aria-label="LinkedIn Ramadhani" class="social-pill-link">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://www.instagram.com/ramadhnii_ahmd/" target="_blank" rel="noopener" aria-label="Instagram Ramadhani" class="social-pill-link">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="mailto:dhnahmad32@gmail.com" aria-label="Email Ramadhani" class="social-pill-link">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
                 </div>
-                <div class="hero-social">
-                    <a href="https://github.com/dhani57" target="_blank" rel="noopener" aria-label="GitHub" class="social-icon"><i class="fab fa-github"></i></a>
-                    <a href="https://www.linkedin.com/in/ramadhani-ahmad/" target="_blank" rel="noopener" aria-label="LinkedIn" class="social-icon"><i class="fab fa-linkedin"></i></a>
-                    <a href="https://www.instagram.com/ramadhnii_ahmd/" target="_blank" rel="noopener" aria-label="Instagram" class="social-icon"><i class="fab fa-instagram"></i></a>
-                </div>
+
             </div>
-            <a href="#about" class="scroll-down" aria-label="Scroll ke bawah">
-                <i class="fas fa-chevron-down"></i>
-            </a>
         </section>
 
-        <!-- ===== ABOUT ===== -->
+        <!-- ===== ABOUT SECTION (FOTO HANYA 1 DI HERO, TAMPILAN EDITORIAL + METRIK) ===== -->
         <section id="about" class="section-about reveal">
             <div class="container">
                 <p class="eyebrow"><em>Tentang Saya</em></p>
-                <div class="about-grid">
-                    <div class="about-image-wrap">
-                        <img src="assets/images/NonFormal.JPG" alt="Foto Ramadhani Ahmad" class="about-photo" loading="lazy">
-                    </div>
-                    <div class="about-content">
+                <div class="about-editorial-wrap">
+                    
+                    <div class="about-narrative">
                         <h2 class="statement">
-                            Web Developer yang berfokus pada pengalaman digital yang bermakna dan berfungsi dengan baik.
+                            Fokus pada rekayasa kode yang bersih, performa kilat, dan solusi digital yang berdampak nyata bagi pengguna.
                         </h2>
                         <p class="body-text">
-                            Saya adalah seorang web developer yang berfokus pada pembuatan website yang tidak hanya terlihat bagus,
-                            tetapi juga berfungsi dengan baik. Dengan pengalaman dalam mengembangkan berbagai jenis website,
-                            dari landing page hingga aplikasi web kompleks.
+                            Saya adalah seorang web developer dengan fokus kuat pada pembuatan aplikasi web modern yang fungsional, andal, dan menyenangkan saat digunakan. Dari perancangan antarmuka landing page interaktif hingga aplikasi web kompleks dengan manajemen state dinamis.
                         </p>
                         <p class="body-text">
-                            Saya selalu berusaha untuk belajar teknologi terbaru dan menerapkan best practices dalam setiap project
-                            yang saya kerjakan. Tujuan saya adalah menciptakan pengalaman digital yang memberikan nilai lebih bagi
-                            pengguna dan klien.
+                            Dalam setiap proyek, saya menerapkan pendekatan <em>engineering best practices</em>: arsitektur modular, penulisan semantic HTML, styling responsif mobile-first, serta optimasi kecepatan muat halaman. Setiap baris kode ditulis dengan tujuan memberikan nilai tambah bagi bisnis dan kenyamanan pengguna.
                         </p>
-                        <div class="about-contact-list">
-                            <div class="about-contact-item">
-                                <i class="fas fa-envelope" aria-hidden="true"></i>
-                                <a href="mailto:dhnahmad32@gmail.com">dhnahmad32@gmail.com</a>
-                            </div>
-                            <div class="about-contact-item">
-                                <i class="fas fa-phone" aria-hidden="true"></i>
-                                <a href="tel:+6281377930636">+62 813-7793-0636</a>
-                            </div>
-                            <div class="about-contact-item">
-                                <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
-                                <span>Lampung, Indonesia</span>
-                            </div>
-                        </div>
-                        <a href="#" class="btn-pill btn-pill--primary" download>Download CV</a>
+                        <p class="body-text">
+                            Saya terus memperdalam eksplorasi teknologi fullstack modern, arsitektur REST API, serta integrasi database yang efisien untuk menghadirkan produk digital masa kini.
+                        </p>
                     </div>
+
+                    <!-- Highlight Stat Cards (Poin 4 Panduan Portfolio) -->
+                    <div class="about-stats-grid">
+                        <div class="stat-card">
+                            <div class="stat-icon"><i class="fas fa-layer-group"></i></div>
+                            <span class="stat-number">6+</span>
+                            <span class="stat-label">Proyek Selesai</span>
+                            <span class="stat-sub">E-commerce, dashboard analitik, platform CMS, &amp; landing page</span>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon"><i class="fas fa-code"></i></div>
+                            <span class="stat-number">15+</span>
+                            <span class="stat-label">Teknologi Dikuasai</span>
+                            <span class="stat-sub">Frontend modern, backend modular, database, &amp; development tools</span>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon"><i class="fas fa-mobile-alt"></i></div>
+                            <span class="stat-number">100%</span>
+                            <span class="stat-label">Mobile-First Ready</span>
+                            <span class="stat-sub">Tampilan optimal dan responsif di smartphone, tablet, &amp; desktop</span>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon"><i class="fas fa-bolt"></i></div>
+                            <span class="stat-number">&lt;1s</span>
+                            <span class="stat-label">Performa Cepat</span>
+                            <span class="stat-sub">Struktur kode ringan, aksesibel, dan ramah optimasi SEO</span>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </section>
 
-        <!-- ===== SELECTED WORKS (PORTFOLIO) ===== -->
+        <!-- ===== PENGALAMAN & PENDIDIKAN (POIN 5 PANDUAN PORTFOLIO) ===== -->
+        <section id="experience" class="section-experience reveal">
+            <div class="container">
+                <p class="eyebrow"><em>Rekam Jejak</em></p>
+                <p class="statement statement--center">
+                    Pengalaman proyek mandiri dan fondasi pendidikan di bidang teknologi.
+                </p>
+
+                <div class="experience-grid">
+                    
+                    <!-- Column 1: Pengalaman Proyek -->
+                    <div class="experience-column">
+                        <h3 class="experience-column-title">
+                            <i class="fas fa-briefcase"></i>
+                            <span>Pengalaman &amp; Proyek Praktik</span>
+                        </h3>
+                        <div class="timeline-list">
+                            <div class="timeline-item">
+                                <div class="timeline-meta">
+                                    <span class="timeline-period">2023 — Sekarang</span>
+                                </div>
+                                <h4 class="timeline-role">Freelance Web Developer</h4>
+                                <p class="timeline-institution">Proyek Mandiri &amp; Klien</p>
+                                <p class="timeline-desc">
+                                    Merancang dan membangun antarmuka web responsif, slicing desain Figma ke kode produksi siap pakai, serta mengintegrasikan sistem interaktif seperti shopping cart dan dashboard analitik.
+                                </p>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-meta">
+                                    <span class="timeline-period">2024</span>
+                                </div>
+                                <h4 class="timeline-role">Frontend &amp; UI Implementation</h4>
+                                <p class="timeline-institution">Litera Store &amp; Analytic Suite</p>
+                                <p class="timeline-desc">
+                                    Memimpin pengembangan frontend platform katalog e-commerce buku dengan data persistence menggunakan LocalStorage dan arsitektur visualisasi data bisnis interaktif.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Column 2: Pendidikan & Pelatihan -->
+                    <div class="experience-column">
+                        <h3 class="experience-column-title">
+                            <i class="fas fa-graduation-cap"></i>
+                            <span>Pendidikan &amp; Kompetensi</span>
+                        </h3>
+                        <div class="timeline-list">
+                            <div class="timeline-item">
+                                <div class="timeline-meta">
+                                    <span class="timeline-period">Pendidikan Formal</span>
+                                </div>
+                                <h4 class="timeline-role">Pendidikan Teknologi / Ilmu Komputer</h4>
+                                <p class="timeline-institution">Lampung, Indonesia</p>
+                                <p class="timeline-desc">
+                                    Mempelajari fondasi algoritma pemrograman, struktur data, rekayasa perangkat lunak, pemrograman web, dan basis data relasional.
+                                </p>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-meta">
+                                    <span class="timeline-period">Sertifikasi &amp; Belajar Mandiri</span>
+                                </div>
+                                <h4 class="timeline-role">Fullstack Web Development Curriculum</h4>
+                                <p class="timeline-institution">Online Coding Bootcamp &amp; Documentation</p>
+                                <p class="timeline-desc">
+                                    Menyelesaikan kurikulum intensif pengembangan web modern: penguasaan JavaScript ES6+, framework React &amp; Vue, manajemen database SQL/NoSQL, dan version control Git.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== SKILLS / TECH STACK DENGAN WARNA BRAND HIDUP (POIN 3) ===== -->
+        <section id="skills" class="section-skills reveal">
+            <div class="container">
+                <p class="eyebrow"><em>Tech Stack &amp; Tools</em></p>
+                <p class="statement statement--center">
+                    Teknologi yang saya gunakan secara aktif untuk membangun solusi web yang terukur.
+                </p>
+
+                <div class="skills-groups">
+
+                    <!-- Frontend Group -->
+                    <div class="skills-group">
+                        <div class="skills-group-header">
+                            <i class="fas fa-laptop-code" style="color: #087EA4;"></i>
+                            <h3 class="skills-group-title">Frontend Development</h3>
+                        </div>
+                        <div class="vibrant-chips-grid">
+                            <div class="tech-chip" data-tech="html5">
+                                <i class="fab fa-html5"></i>
+                                <span>HTML5</span>
+                            </div>
+                            <div class="tech-chip" data-tech="css3">
+                                <i class="fab fa-css3-alt"></i>
+                                <span>CSS3</span>
+                            </div>
+                            <div class="tech-chip" data-tech="javascript">
+                                <i class="fab fa-js"></i>
+                                <span>JavaScript</span>
+                            </div>
+                            <div class="tech-chip" data-tech="react">
+                                <i class="fab fa-react"></i>
+                                <span>React</span>
+                            </div>
+                            <div class="tech-chip" data-tech="vue">
+                                <i class="fab fa-vuejs"></i>
+                                <span>Vue.js</span>
+                            </div>
+                            <div class="tech-chip" data-tech="nextjs">
+                                <i class="fas fa-arrow-circle-right"></i>
+                                <span>Next.js</span>
+                            </div>
+                            <div class="tech-chip" data-tech="tailwind">
+                                <i class="fas fa-wind"></i>
+                                <span>Tailwind CSS</span>
+                            </div>
+                            <div class="tech-chip" data-tech="bootstrap">
+                                <i class="fab fa-bootstrap"></i>
+                                <span>Bootstrap</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Backend & Database Group -->
+                    <div class="skills-group">
+                        <div class="skills-group-header">
+                            <i class="fas fa-server" style="color: #339933;"></i>
+                            <h3 class="skills-group-title">Backend &amp; Database</h3>
+                        </div>
+                        <div class="vibrant-chips-grid">
+                            <div class="tech-chip" data-tech="nodejs">
+                                <i class="fab fa-node-js"></i>
+                                <span>Node.js</span>
+                            </div>
+                            <div class="tech-chip" data-tech="python">
+                                <i class="fab fa-python"></i>
+                                <span>Python</span>
+                            </div>
+                            <div class="tech-chip" data-tech="php">
+                                <i class="fab fa-php"></i>
+                                <span>PHP</span>
+                            </div>
+                            <div class="tech-chip" data-tech="mysql">
+                                <i class="fas fa-database"></i>
+                                <span>MySQL</span>
+                            </div>
+                            <div class="tech-chip" data-tech="mongodb">
+                                <i class="fas fa-leaf"></i>
+                                <span>MongoDB</span>
+                            </div>
+                            <div class="tech-chip" data-tech="postgresql">
+                                <i class="fas fa-database"></i>
+                                <span>PostgreSQL</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tools & Workflow Group -->
+                    <div class="skills-group">
+                        <div class="skills-group-header">
+                            <i class="fas fa-toolbox" style="color: #F05032;"></i>
+                            <h3 class="skills-group-title">Tools &amp; Workflow</h3>
+                        </div>
+                        <div class="vibrant-chips-grid">
+                            <div class="tech-chip" data-tech="git">
+                                <i class="fab fa-git-alt"></i>
+                                <span>Git</span>
+                            </div>
+                            <div class="tech-chip" data-tech="github">
+                                <i class="fab fa-github"></i>
+                                <span>GitHub</span>
+                            </div>
+                            <div class="tech-chip" data-tech="figma">
+                                <i class="fab fa-figma"></i>
+                                <span>Figma</span>
+                            </div>
+                            <div class="tech-chip" data-tech="vscode">
+                                <i class="fas fa-code"></i>
+                                <span>VS Code</span>
+                            </div>
+                            <div class="tech-chip" data-tech="postman">
+                                <i class="fas fa-paper-plane"></i>
+                                <span>Postman</span>
+                            </div>
+                            <div class="tech-chip" data-tech="wordpress">
+                                <i class="fab fa-wordpress"></i>
+                                <span>WordPress</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== SELECTED WORKS: 2 PROYEK UNGGULAN (POIN 2 PANDUAN) ===== -->
         <section id="portfolio" class="section-works reveal">
             <div class="container">
                 <p class="eyebrow"><em>Selected Works</em></p>
                 <p class="statement statement--center">
-                    Beberapa karya terpilih yang telah saya kerjakan dengan penuh dedikasi.
+                    Dua studi kasus proyek unggulan dengan fokus pada penyelesaian masalah nyata dan arsitektur kode.
                 </p>
 
-                <!-- Filter Chips -->
-                <div class="filter-bar" role="group" aria-label="Filter portofolio">
-                    <button class="btn-pill" aria-pressed="true" data-filter="all">Semua</button>
-                    <button class="btn-pill" aria-pressed="false" data-filter="frontend">Frontend</button>
-                    <button class="btn-pill" aria-pressed="false" data-filter="ecommerce">E-Commerce</button>
-                    <button class="btn-pill" aria-pressed="false" data-filter="data">Data</button>
-                    <button class="btn-pill" aria-pressed="false" data-filter="platform">Platform</button>
+                <div class="featured-works-grid">
+
+                    <!-- Featured Case Study 1: Litera Store -->
+                    <article class="case-study-card" aria-label="Studi Kasus Litera Store">
+                        <a href="project-litera-store.html" class="case-study-media-link" aria-label="Lihat studi kasus Litera Store">
+                            <div class="case-study-media">
+                                <img src="assets/images/Litera_store.png" alt="Litera Store E-Commerce Platform" loading="lazy">
+                            </div>
+                        </a>
+                        <div class="case-study-body">
+                            <div class="case-study-badge-row">
+                                <span class="case-study-category">E-Commerce &bull; Full Web App</span>
+                                <span class="case-study-year">2024</span>
+                            </div>
+
+                            <h3 class="case-study-title">
+                                <a href="project-litera-store.html"><em>Litera Store — Toko Buku Online Modern</em></a>
+                            </h3>
+
+                            <p class="case-study-desc">
+                                Platform e-commerce buku interaktif yang dirancang untuk memberikan pengalaman belanja yang mulus tanpa beban pemuatan halaman yang berulang.
+                            </p>
+
+                            <!-- Structured Case Study Points (Poin 2 Panduan) -->
+                            <div class="case-study-specs">
+                                <div><strong>Masalah:</strong> Sulitnya proses pencarian dan pemesanan buku online dengan keranjang yang tidak tersimpan saat refresh.</div>
+                                <div><strong>Peran:</strong> Lead Developer — Merancang alur UI, state keranjang belanja, &amp; data persistence.</div>
+                                <div><strong>Tantangan &amp; Solusi:</strong> Mengimplementasikan LocalStorage API untuk sinkronisasi cart secara instan tanpa ketergantungan server database.</div>
+                            </div>
+
+                            <div class="case-study-tags">
+                                <span class="tag-mini">HTML5</span>
+                                <span class="tag-mini">CSS Grid</span>
+                                <span class="tag-mini">JavaScript ES6</span>
+                                <span class="tag-mini">Local Storage</span>
+                            </div>
+
+                            <div class="case-study-actions">
+                                <a href="project-litera-store.html" class="action-link">
+                                    <span>Lihat Studi Kasus</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                </a>
+                                <a href="https://github.com/dhani57" target="_blank" rel="noopener" class="action-link-secondary" aria-label="Repo GitHub Litera Store">
+                                    <i class="fab fa-github"></i> Repository
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Featured Case Study 2: Dashboard Analytics -->
+                    <article class="case-study-card" aria-label="Studi Kasus Dashboard Analytics">
+                        <a href="project-dashboard.html" class="case-study-media-link" aria-label="Lihat studi kasus Dashboard Analytics">
+                            <div class="case-study-media case-study-media--placeholder">
+                                <div class="placeholder-inner-icon">
+                                    <i class="fas fa-chart-line"></i>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="case-study-body">
+                            <div class="case-study-badge-row">
+                                <span class="case-study-category">Business Intelligence &bull; Dashboard</span>
+                                <span class="case-study-year">2024</span>
+                            </div>
+
+                            <h3 class="case-study-title">
+                                <a href="project-dashboard.html"><em>Dashboard Analytics — Monitoring Data Bisnis</em></a>
+                            </h3>
+
+                            <p class="case-study-desc">
+                                Antarmuka dashboard real-time yang memvisualisasikan tren penjualan, performa operasional, dan metrik keuangan perusahaan dalam satu layar terpusat.
+                            </p>
+
+                            <!-- Structured Case Study Points (Poin 2 Panduan) -->
+                            <div class="case-study-specs">
+                                <div><strong>Masalah:</strong> Pelaporan data penjualan manual memakan waktu lama dan rawan kesalahan interpretasi.</div>
+                                <div><strong>Peran:</strong> Frontend Engineer — Membangun komponen UI modular dan visualisasi Chart.js.</div>
+                                <div><strong>Tantangan &amp; Solusi:</strong> Optimasi rendering grafik multi-dimensi agar tetap mulus saat memproses ratusan poin data berkala.</div>
+                            </div>
+
+                            <div class="case-study-tags">
+                                <span class="tag-mini">Vue.js</span>
+                                <span class="tag-mini">Chart.js</span>
+                                <span class="tag-mini">Modular CSS</span>
+                                <span class="tag-mini">REST API Ready</span>
+                            </div>
+
+                            <div class="case-study-actions">
+                                <a href="project-dashboard.html" class="action-link">
+                                    <span>Lihat Studi Kasus</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                </a>
+                                <a href="https://github.com/dhani57" target="_blank" rel="noopener" class="action-link-secondary" aria-label="Repo GitHub Dashboard">
+                                    <i class="fab fa-github"></i> Repository
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
                 </div>
-
-                <!-- Works Grid -->
-                <div class="works-grid" id="works-grid">
-
-                    <!-- Card 1 - Litera Store (featured / large) -->
-                    <article class="work-card work-card--large" data-category="ecommerce" aria-label="Litera Store">
-                        <a href="project-litera-store.html" class="card-media-link">
-                            <div class="card-media">
-                                <img src="assets/images/Litera_store.png" alt="Litera Store — E-Commerce Book Website" loading="lazy">
-                            </div>
-                        </a>
-                        <div class="card-body">
-                            <h3 class="card-title"><a href="project-litera-store.html"><em>Litera Store</em></a></h3>
-                            <p class="card-desc">Platform belanja buku online modern dengan katalog lengkap, keranjang belanja interaktif, dan sistem pencarian canggih.</p>
-                            <div class="card-tags">
-                                <span class="tag">Web</span>
-                                <span class="tag">E-Commerce</span>
-                                <span class="tag">JavaScript</span>
-                            </div>
-                            <a href="project-litera-store.html" class="card-link" aria-label="Lihat detail Litera Store">Lihat Detail <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </article>
-
-                    <!-- Card 2 - Landing Page -->
-                    <article class="work-card" data-category="frontend" aria-label="Landing Page">
-                        <a href="project-landing-page.html" class="card-media-link">
-                            <div class="card-media card-media--placeholder">
-                                <div class="placeholder-inner">
-                                    <i class="fas fa-mobile-alt" aria-hidden="true"></i>
-                                </div>
-                            </div>
-                        </a>
-                        <div class="card-body">
-                            <h3 class="card-title"><a href="project-landing-page.html"><em>Landing Page</em></a></h3>
-                            <p class="card-desc">Landing page responsif untuk startup teknologi dengan animasi modern dan konversi tinggi.</p>
-                            <div class="card-tags">
-                                <span class="tag">Frontend</span>
-                                <span class="tag">React</span>
-                                <span class="tag">Tailwind</span>
-                            </div>
-                            <a href="project-landing-page.html" class="card-link" aria-label="Lihat detail Landing Page">Lihat Detail <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </article>
-
-                    <!-- Card 3 - Dashboard Analytics -->
-                    <article class="work-card" data-category="data" aria-label="Dashboard Analytics">
-                        <a href="project-dashboard.html" class="card-media-link">
-                            <div class="card-media card-media--placeholder">
-                                <div class="placeholder-inner">
-                                    <i class="fas fa-chart-line" aria-hidden="true"></i>
-                                </div>
-                            </div>
-                        </a>
-                        <div class="card-body">
-                            <h3 class="card-title"><a href="project-dashboard.html"><em>Dashboard Analytics</em></a></h3>
-                            <p class="card-desc">Dashboard interaktif untuk monitoring data bisnis secara real-time dengan visualisasi grafik dinamis.</p>
-                            <div class="card-tags">
-                                <span class="tag">Data</span>
-                                <span class="tag">Analytics</span>
-                                <span class="tag">Vue.js</span>
-                            </div>
-                            <a href="project-dashboard.html" class="card-link" aria-label="Lihat detail Dashboard Analytics">Lihat Detail <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </article>
-
-                    <!-- Card 4 - Blog Platform -->
-                    <article class="work-card" data-category="platform" aria-label="Blog Platform">
-                        <a href="project-blog.html" class="card-media-link">
-                            <div class="card-media card-media--placeholder">
-                                <div class="placeholder-inner">
-                                    <i class="fas fa-blog" aria-hidden="true"></i>
-                                </div>
-                            </div>
-                        </a>
-                        <div class="card-body">
-                            <h3 class="card-title"><a href="project-blog.html"><em>Blog Platform</em></a></h3>
-                            <p class="card-desc">Platform blogging dengan CMS modern, editor konten kaya, dan manajemen konten yang mudah.</p>
-                            <div class="card-tags">
-                                <span class="tag">Platform</span>
-                                <span class="tag">WordPress</span>
-                                <span class="tag">PHP</span>
-                            </div>
-                            <a href="project-blog.html" class="card-link" aria-label="Lihat detail Blog Platform">Lihat Detail <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </article>
-
-                    <!-- Card 5 - Restaurant Website -->
-                    <article class="work-card" data-category="frontend" aria-label="Restaurant Website">
-                        <a href="project-restaurant.html" class="card-media-link">
-                            <div class="card-media card-media--placeholder">
-                                <div class="placeholder-inner">
-                                    <i class="fas fa-utensils" aria-hidden="true"></i>
-                                </div>
-                            </div>
-                        </a>
-                        <div class="card-body">
-                            <h3 class="card-title"><a href="project-restaurant.html"><em>Restaurant Website</em></a></h3>
-                            <p class="card-desc">Website restoran elegan dengan sistem pemesanan online, menu digital, dan galeri foto makanan.</p>
-                            <div class="card-tags">
-                                <span class="tag">Frontend</span>
-                                <span class="tag">HTML</span>
-                                <span class="tag">Bootstrap</span>
-                            </div>
-                            <a href="project-restaurant.html" class="card-link" aria-label="Lihat detail Restaurant Website">Lihat Detail <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </article>
-
-                    <!-- Card 6 - Learning Platform -->
-                    <article class="work-card" data-category="platform" aria-label="Learning Platform">
-                        <a href="project-learning.html" class="card-media-link">
-                            <div class="card-media card-media--placeholder">
-                                <div class="placeholder-inner">
-                                    <i class="fas fa-graduation-cap" aria-hidden="true"></i>
-                                </div>
-                            </div>
-                        </a>
-                        <div class="card-body">
-                            <h3 class="card-title"><a href="project-learning.html"><em>Learning Platform</em></a></h3>
-                            <p class="card-desc">Platform e-learning interaktif dengan modul kursus, kuis, dan progress tracking pengguna.</p>
-                            <div class="card-tags">
-                                <span class="tag">Platform</span>
-                                <span class="tag">Next.js</span>
-                                <span class="tag">MongoDB</span>
-                            </div>
-                            <a href="project-learning.html" class="card-link" aria-label="Lihat detail Learning Platform">Lihat Detail <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </article>
-
-                </div><!-- /works-grid -->
             </div>
         </section>
 
-        <!-- ===== SKILLS ===== -->
-        <section id="skills" class="section-skills reveal">
+        <!-- ===== LAYAR BERGERAK: PROYEK LAINNYA (INFINITE MARQUEE SHOWCASE) ===== -->
+        <section class="section-marquee-showcase">
             <div class="container">
-                <p class="eyebrow"><em>Keahlian</em></p>
+                <div class="marquee-header-wrap">
+                    <p class="eyebrow"><em>Eksplorasi Proyek Lainnya</em></p>
+                    <h3 class="marquee-title">Karya Lainnya yang Bergerak Dinamis</h3>
+                    <p class="marquee-subtitle">Arahkan kursor untuk menghentikan layar bergerak &bull; Klik kartu untuk membuka detail</p>
+                </div>
+            </div>
+
+            <!-- Continuous Infinite Moving Marquee Track -->
+            <div class="marquee-container" aria-label="Layar bergerak menampilkan proyek web lainnya">
+                <div class="marquee-track">
+
+                    <!-- Project Card 1: Landing Page -->
+                    <div class="marquee-card">
+                        <div class="marquee-card-top">
+                            <div class="marquee-card-icon"><i class="fas fa-mobile-alt"></i></div>
+                            <span class="tag-mini">Frontend &bull; React</span>
+                        </div>
+                        <h4 class="marquee-card-title">Startup Landing Page</h4>
+                        <p class="marquee-card-desc">Halaman promosi startup teknologi responsif dengan fokus tinggi pada konversi dan performa.</p>
+                        <div class="marquee-card-tags">
+                            <span class="tag-mini">React</span>
+                            <span class="tag-mini">Tailwind CSS</span>
+                        </div>
+                        <a href="project-landing-page.html" class="marquee-card-link">
+                            <span>Detail Proyek</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+
+                    <!-- Project Card 2: Restaurant Website -->
+                    <div class="marquee-card">
+                        <div class="marquee-card-top">
+                            <div class="marquee-card-icon"><i class="fas fa-utensils"></i></div>
+                            <span class="tag-mini">Food &amp; Beverage</span>
+                        </div>
+                        <h4 class="marquee-card-title">Restaurant Website</h4>
+                        <p class="marquee-card-desc">Situs restoran elegan dilengkapi sistem reservasi meja online dan katalog menu digital.</p>
+                        <div class="marquee-card-tags">
+                            <span class="tag-mini">HTML5</span>
+                            <span class="tag-mini">Bootstrap 5</span>
+                        </div>
+                        <a href="project-restaurant.html" class="marquee-card-link">
+                            <span>Detail Proyek</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+
+                    <!-- Project Card 3: Blog Platform -->
+                    <div class="marquee-card">
+                        <div class="marquee-card-top">
+                            <div class="marquee-card-icon"><i class="fas fa-blog"></i></div>
+                            <span class="tag-mini">CMS Platform</span>
+                        </div>
+                        <h4 class="marquee-card-title">Modern Blog CMS</h4>
+                        <p class="marquee-card-desc">Platform publikasi konten dengan custom theme WordPress yang ringan, terstruktur, dan ramah SEO.</p>
+                        <div class="marquee-card-tags">
+                            <span class="tag-mini">WordPress</span>
+                            <span class="tag-mini">PHP</span>
+                        </div>
+                        <a href="project-blog.html" class="marquee-card-link">
+                            <span>Detail Proyek</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+
+                    <!-- Project Card 4: Learning Platform -->
+                    <div class="marquee-card">
+                        <div class="marquee-card-top">
+                            <div class="marquee-card-icon"><i class="fas fa-graduation-cap"></i></div>
+                            <span class="tag-mini">E-Learning App</span>
+                        </div>
+                        <h4 class="marquee-card-title">Interactive Learning Hub</h4>
+                        <p class="marquee-card-desc">Aplikasi kursus online interaktif dengan modul terstruktur, kuis mandiri, dan progress tracker.</p>
+                        <div class="marquee-card-tags">
+                            <span class="tag-mini">Next.js</span>
+                            <span class="tag-mini">MongoDB</span>
+                        </div>
+                        <a href="project-learning.html" class="marquee-card-link">
+                            <span>Detail Proyek</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+
+                    <!-- DUPLICATE TRACK FOR SEAMLESS INFINITE LOOP -->
+                    <div class="marquee-card" aria-hidden="true">
+                        <div class="marquee-card-top">
+                            <div class="marquee-card-icon"><i class="fas fa-mobile-alt"></i></div>
+                            <span class="tag-mini">Frontend &bull; React</span>
+                        </div>
+                        <h4 class="marquee-card-title">Startup Landing Page</h4>
+                        <p class="marquee-card-desc">Halaman promosi startup teknologi responsif dengan fokus tinggi pada konversi dan performa.</p>
+                        <div class="marquee-card-tags">
+                            <span class="tag-mini">React</span>
+                            <span class="tag-mini">Tailwind CSS</span>
+                        </div>
+                        <a href="project-landing-page.html" class="marquee-card-link" tabindex="-1">
+                            <span>Detail Proyek</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+
+                    <div class="marquee-card" aria-hidden="true">
+                        <div class="marquee-card-top">
+                            <div class="marquee-card-icon"><i class="fas fa-utensils"></i></div>
+                            <span class="tag-mini">Food &amp; Beverage</span>
+                        </div>
+                        <h4 class="marquee-card-title">Restaurant Website</h4>
+                        <p class="marquee-card-desc">Situs restoran elegan dilengkapi sistem reservasi meja online dan katalog menu digital.</p>
+                        <div class="marquee-card-tags">
+                            <span class="tag-mini">HTML5</span>
+                            <span class="tag-mini">Bootstrap 5</span>
+                        </div>
+                        <a href="project-restaurant.html" class="marquee-card-link" tabindex="-1">
+                            <span>Detail Proyek</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+
+                    <div class="marquee-card" aria-hidden="true">
+                        <div class="marquee-card-top">
+                            <div class="marquee-card-icon"><i class="fas fa-blog"></i></div>
+                            <span class="tag-mini">CMS Platform</span>
+                        </div>
+                        <h4 class="marquee-card-title">Modern Blog CMS</h4>
+                        <p class="marquee-card-desc">Platform publikasi konten dengan custom theme WordPress yang ringan, terstruktur, dan ramah SEO.</p>
+                        <div class="marquee-card-tags">
+                            <span class="tag-mini">WordPress</span>
+                            <span class="tag-mini">PHP</span>
+                        </div>
+                        <a href="project-blog.html" class="marquee-card-link" tabindex="-1">
+                            <span>Detail Proyek</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+
+                    <div class="marquee-card" aria-hidden="true">
+                        <div class="marquee-card-top">
+                            <div class="marquee-card-icon"><i class="fas fa-graduation-cap"></i></div>
+                            <span class="tag-mini">E-Learning App</span>
+                        </div>
+                        <h4 class="marquee-card-title">Interactive Learning Hub</h4>
+                        <p class="marquee-card-desc">Aplikasi kursus online interaktif dengan modul terstruktur, kuis mandiri, dan progress tracker.</p>
+                        <div class="marquee-card-tags">
+                            <span class="tag-mini">Next.js</span>
+                            <span class="tag-mini">MongoDB</span>
+                        </div>
+                        <a href="project-learning.html" class="marquee-card-link" tabindex="-1">
+                            <span>Detail Proyek</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== STANDAR KUALITAS KODE (POIN 6 PANDUAN PORTFOLIO) ===== -->
+        <section class="section-code-quality reveal">
+            <div class="container">
+                <p class="eyebrow"><em>Kualitas Kode</em></p>
                 <p class="statement statement--center">
-                    Teknologi dan tools yang saya gunakan untuk mewujudkan ide menjadi produk digital.
+                    Standar rekayasa perangkat lunak yang selalu saya pegang teguh.
                 </p>
 
-                <div class="skills-groups">
-                    <div class="skills-group">
-                        <h3 class="skills-group-label">Frontend</h3>
-                        <div class="chips">
-                            <span class="chip">HTML5</span>
-                            <span class="chip">CSS3</span>
-                            <span class="chip">JavaScript</span>
-                            <span class="chip">React</span>
-                            <span class="chip">Vue.js</span>
-                            <span class="chip">Next.js</span>
-                            <span class="chip">Tailwind CSS</span>
-                            <span class="chip">Bootstrap</span>
-                        </div>
+                <div class="code-quality-grid">
+                    <div class="quality-card">
+                        <i class="fas fa-code-branch"></i>
+                        <h4>Version Control &amp; Git Flow</h4>
+                        <p>Commit message jelas, branching teratur, dan dokumentasi README instalasi yang ramah developer.</p>
                     </div>
-                    <div class="skills-group">
-                        <h3 class="skills-group-label">Backend &amp; Database</h3>
-                        <div class="chips">
-                            <span class="chip">Node.js</span>
-                            <span class="chip">Python</span>
-                            <span class="chip">PHP</span>
-                            <span class="chip">MySQL</span>
-                            <span class="chip">MongoDB</span>
-                            <span class="chip">PostgreSQL</span>
-                        </div>
+                    <div class="quality-card">
+                        <i class="fas fa-cubes"></i>
+                        <h4>Arsitektur Bersih &amp; Modular</h4>
+                        <p>Komponen kode mudah dibaca, dapat digunakan kembali (reusable), dan minim redundant code.</p>
                     </div>
-                    <div class="skills-group">
-                        <h3 class="skills-group-label">Tools &amp; Lainnya</h3>
-                        <div class="chips">
-                            <span class="chip">Git</span>
-                            <span class="chip">GitHub</span>
-                            <span class="chip">Figma</span>
-                            <span class="chip">VS Code</span>
-                            <span class="chip">Postman</span>
-                            <span class="chip">WordPress</span>
-                        </div>
+                    <div class="quality-card">
+                        <i class="fas fa-tachometer-alt"></i>
+                        <h4>Performa &amp; Optimasi Aset</h4>
+                        <p>Lazy loading media, kompresi aset, penataan CSS efisien, dan rendering DOM tanpa lag.</p>
+                    </div>
+                    <div class="quality-card">
+                        <i class="fas fa-universal-access"></i>
+                        <h4>Aksesibilitas &amp; Semantik</h4>
+                        <p>Penggunaan tag semantik HTML5, atribut ARIA, navigasi keyboard, dan kontras warna standar WCAG.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- ===== CONTACT ===== -->
+        <!-- ===== KONTAK & LINK PROFESIONAL (POIN 7 PANDUAN) ===== -->
         <section id="contact" class="section-contact reveal">
             <div class="container">
                 <p class="eyebrow"><em>Kontak</em></p>
                 <p class="statement statement--center">
-                    Mari bekerja sama untuk mewujudkan project Anda.
+                    Punya ide proyek atau peluang kerja sama? Mari terhubung dan diskusikan bersama.
                 </p>
 
                 <div class="contact-layout">
+
+                    <!-- Interactive Form with Instant Validation -->
                     <form class="contact-form" id="contact-form" novalidate>
                         <div id="form-success" class="form-success" aria-live="polite" hidden>
                             <i class="fas fa-check-circle"></i>
-                            Terima kasih! Pesan Anda telah terkirim. Saya akan segera menghubungi Anda.
+                            <span>Terima kasih! Pesan Anda telah terkirim. Saya akan segera membalas email Anda.</span>
                         </div>
+
                         <div class="form-field">
-                            <label class="input-label" for="name"><em>Nama</em></label>
-                            <input class="input" type="text" id="name" name="name" placeholder="Nama lengkap Anda" required autocomplete="name">
+                            <label class="input-label" for="name"><em>Nama Lengkap</em></label>
+                            <input class="input" type="text" id="name" name="name" placeholder="Nama Anda" required autocomplete="name">
                             <span class="field-error" id="name-error" role="alert"></span>
                         </div>
+
                         <div class="form-field">
-                            <label class="input-label" for="email"><em>Email</em></label>
+                            <label class="input-label" for="email"><em>Alamat Email</em></label>
                             <input class="input" type="email" id="email" name="email" placeholder="email@contoh.com" required autocomplete="email">
                             <span class="field-error" id="email-error" role="alert"></span>
                         </div>
+
                         <div class="form-field">
-                            <label class="input-label" for="subject"><em>Subject</em></label>
-                            <input class="input" type="text" id="subject" name="subject" placeholder="Tentang apa pesan Anda?" required>
+                            <label class="input-label" for="subject"><em>Subjek / Topik Proyek</em></label>
+                            <input class="input" type="text" id="subject" name="subject" placeholder="Tawaran proyek, kolaborasi, atau diskusi" required>
                             <span class="field-error" id="subject-error" role="alert"></span>
                         </div>
+
                         <div class="form-field">
                             <label class="input-label" for="message"><em>Pesan</em></label>
-                            <textarea class="input input--textarea" id="message" name="message" rows="5" placeholder="Tuliskan pesan Anda di sini..." required></textarea>
+                            <textarea class="input input--textarea" id="message" name="message" rows="5" placeholder="Ceritakan kebutuhan atau detail proyek Anda..." required></textarea>
                             <span class="field-error" id="message-error" role="alert"></span>
                         </div>
-                        <button type="submit" class="btn-pill btn-pill--primary">Kirim Pesan</button>
+
+                        <button type="submit" class="btn-pill btn-pill--primary">
+                            <i class="fas fa-paper-plane"></i>
+                            <span>Kirim Pesan Sekarang</span>
+                        </button>
                     </form>
 
+                    <!-- Contact Details & Social Links -->
                     <div class="contact-info">
+                        
+                        <div class="contact-status-card">
+                            <span class="status-dot"></span>
+                            <div>
+                                <span class="contact-info-label">Status Ketersediaan</span>
+                                <span class="contact-info-value" style="font-weight: 600;">Open for Freelance &amp; Full-time Work</span>
+                            </div>
+                        </div>
+
                         <div class="contact-info-item">
                             <i class="fas fa-envelope" aria-hidden="true"></i>
                             <div>
-                                <span class="contact-info-label">Email</span>
+                                <span class="contact-info-label">Email Utama</span>
                                 <a href="mailto:dhnahmad32@gmail.com" class="contact-info-value">dhnahmad32@gmail.com</a>
                             </div>
                         </div>
+
                         <div class="contact-info-item">
                             <i class="fas fa-phone" aria-hidden="true"></i>
                             <div>
-                                <span class="contact-info-label">Telepon</span>
+                                <span class="contact-info-label">WhatsApp / Telepon</span>
                                 <a href="tel:+6281377930636" class="contact-info-value">+62 813-7793-0636</a>
                             </div>
                         </div>
+
                         <div class="contact-info-item">
                             <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
                             <div>
-                                <span class="contact-info-label">Lokasi</span>
-                                <span class="contact-info-value">Lampung, Indonesia</span>
+                                <span class="contact-info-label">Lokasi Domisili</span>
+                                <span class="contact-info-value">Lampung, Indonesia (Tersedia Remote)</span>
                             </div>
                         </div>
+
+                        <div class="contact-info-item">
+                            <i class="fas fa-file-pdf" aria-hidden="true"></i>
+                            <div>
+                                <span class="contact-info-label">Curriculum Vitae</span>
+                                <a href="assets/images/PasFoto.jpg" download="CV-Ramadhani-Ahmad.pdf" class="contact-info-value" style="text-decoration: underline;">Unduh CV Terbaru (PDF)</a>
+                            </div>
+                        </div>
+
                         <div class="contact-social">
-                            <a href="https://github.com/dhani57" target="_blank" rel="noopener" aria-label="GitHub" class="social-icon"><i class="fab fa-github"></i></a>
-                            <a href="https://www.linkedin.com/in/ramadhani-ahmad/" target="_blank" rel="noopener" aria-label="LinkedIn" class="social-icon"><i class="fab fa-linkedin"></i></a>
-                            <a href="https://www.instagram.com/ramadhnii_ahmd/" target="_blank" rel="noopener" aria-label="Instagram" class="social-icon"><i class="fab fa-instagram"></i></a>
+                            <a href="https://github.com/dhani57" target="_blank" rel="noopener" aria-label="GitHub" class="social-pill-link"><i class="fab fa-github"></i></a>
+                            <a href="https://www.linkedin.com/in/ramadhani-ahmad/" target="_blank" rel="noopener" aria-label="LinkedIn" class="social-pill-link"><i class="fab fa-linkedin"></i></a>
+                            <a href="https://www.instagram.com/ramadhnii_ahmd/" target="_blank" rel="noopener" aria-label="Instagram" class="social-pill-link"><i class="fab fa-instagram"></i></a>
+                            <a href="mailto:dhnahmad32@gmail.com" aria-label="Email" class="social-pill-link"><i class="fas fa-envelope"></i></a>
                         </div>
                     </div>
+
                 </div>
             </div>
         </section>
@@ -389,15 +819,16 @@
     <footer class="site-footer">
         <div class="footer-inner">
             <a href="#home" class="site-logo site-logo--inverse">Ramadhani</a>
-            <p class="footer-copy">&copy; 2025 Ramadhani Ahmad. All rights reserved.</p>
+            <p class="footer-copy">&copy; 2025 Ramadhani Ahmad &bull; Dirancang &amp; Dibangun dengan standar performa dan kode bersih.</p>
             <div class="footer-social">
-                <a href="https://github.com/dhani57" target="_blank" rel="noopener" aria-label="GitHub" class="social-icon social-icon--inverse"><i class="fab fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/ramadhani-ahmad/" target="_blank" rel="noopener" aria-label="LinkedIn" class="social-icon social-icon--inverse"><i class="fab fa-linkedin"></i></a>
-                <a href="https://www.instagram.com/ramadhnii_ahmd/" target="_blank" rel="noopener" aria-label="Instagram" class="social-icon social-icon--inverse"><i class="fab fa-instagram"></i></a>
+                <a href="https://github.com/dhani57" target="_blank" rel="noopener" aria-label="GitHub" class="social-pill-link" style="background: rgba(255,255,255,0.1); border-color: transparent; color: #FFF;"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/ramadhani-ahmad/" target="_blank" rel="noopener" aria-label="LinkedIn" class="social-pill-link" style="background: rgba(255,255,255,0.1); border-color: transparent; color: #FFF;"><i class="fab fa-linkedin"></i></a>
+                <a href="https://www.instagram.com/ramadhnii_ahmd/" target="_blank" rel="noopener" aria-label="Instagram" class="social-pill-link" style="background: rgba(255,255,255,0.1); border-color: transparent; color: #FFF;"><i class="fab fa-instagram"></i></a>
             </div>
         </div>
     </footer>
 
+    <!-- Scripts -->
     <script src="js/main.js"></script>
 </body>
 </html>
